@@ -11,6 +11,9 @@ export default defineConfig({
         react(),
     ],
     server: {
-        host: os.networkInterfaces().eth0?.[0].address,
-    }
+        host: '0.0.0.0',
+        hmr: {
+            host: 'localhost'
+        }
+    },
 });
